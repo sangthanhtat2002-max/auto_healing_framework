@@ -11,7 +11,7 @@ class Healer:
         log(f"Healing locator: {by}={value}")
 
         # 1. lấy toàn bộ DOM
-        elements = get_dom_elements(self.driver.driver)
+        elements = get_dom_elements(self.driver)
 
         scored = []
 
@@ -36,7 +36,7 @@ class Healer:
         log(f"Healed XPath: {xpath}")
 
         # 5. QUAN TRỌNG: dùng selenium driver thật
-        return self.driver.driver.find_element("xpath", xpath)
+        return self.driver.find_element("xpath", xpath)
 
     def _build_xpath(self, element):
         tag = element.name
