@@ -5,7 +5,7 @@ from pages.login_page import LoginPage
 def test_login():
     driver = HealedDriver()
 
-    driver.get("https://aim.qa.spdigital.sg/login")
+    driver.get("")
 
     page = LoginPage(driver)
 
