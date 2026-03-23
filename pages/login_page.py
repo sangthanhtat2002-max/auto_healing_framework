@@ -39,3 +39,9 @@ class LoginPage(BasePage):
         self.enter_username(username)
         self.enter_password(password)
         self.click_login()
+
+    def is_login_success(self):
+        try:
+            return "dashboard" in self.driver.driver.current_url.lower()
+        except:
+            return False
